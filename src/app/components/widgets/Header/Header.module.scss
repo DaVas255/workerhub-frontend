@@ -1,0 +1,30 @@
+.header {
+	padding: 15px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__logo {
+		width: 100px;
+	}
+
+	&__nav {
+		display: flex;
+		column-gap: 2rem;
+	}
+
+	&__profile {
+		width: 28px;
+	}
+
+	&__navItemLink {
+		border-bottom: 2px solid transparent;
+
+		&_active {
+			color: #3E68FF;
+			border-color: #3E68FF;
+		}
+	}
+
+}
