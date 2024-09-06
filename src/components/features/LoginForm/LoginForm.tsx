@@ -1,6 +1,6 @@
 import { IFormData } from "@/app/types/types"
 import authService from "@/services/auth.service"
-import { Input } from "@/app/components/ui/Input/Input"
+import { Input } from "@/components/ui/Input/Input"
 import styles from "./LoginForm.module.scss"
 
 import { useMutation } from "@tanstack/react-query"

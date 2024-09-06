@@ -1,4 +1,4 @@
-import { MainLayout } from "@/app/components/layouts/MainLayout/MainLayout"
+import { MainLayout } from "@/components/layouts/MainLayout/MainLayout"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 

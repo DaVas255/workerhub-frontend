@@ -1,4 +1,4 @@
-import { MainLayout } from "@/app/components/layouts/MainLayout/MainLayout"
+import { MainLayout } from "@/components/layouts/MainLayout/MainLayout"
 
 export const HomePage = () => {
   return (

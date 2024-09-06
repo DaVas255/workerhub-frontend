@@ -1,4 +1,4 @@
-import { MainLayout } from "@/app/components/layouts/MainLayout/MainLayout"
+import { MainLayout } from "@/components/layouts/MainLayout/MainLayout"
 import authService from "@/services/auth.service"
 import { useQuery } from "@tanstack/react-query"
 import { useEffect } from "react"

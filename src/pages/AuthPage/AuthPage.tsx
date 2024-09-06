@@ -1,6 +1,6 @@
-import { LoginForm } from '@/app/components/features/LoginForm/LoginForm'
-import { RegisterForm } from '@/app/components/features/RegisterForm/RegisterForm'
-import { MainLayout } from '@/app/components/layouts/MainLayout/MainLayout'
+import { LoginForm } from '@/components/features/LoginForm/LoginForm'
+import { RegisterForm } from '@/components/features/RegisterForm/RegisterForm'
+import { MainLayout } from '@/components/layouts/MainLayout/MainLayout'
 import styles from './AuthPage.module.scss'
 
 import { useEffect, useState } from 'react'

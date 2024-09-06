@@ -1,4 +1,4 @@
-import { Header } from '@/app/components/widgets/Header/Header';
+import { Header } from '@/components/widgets/Header/Header';
 import styles from './MainLayout.module.scss';
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
