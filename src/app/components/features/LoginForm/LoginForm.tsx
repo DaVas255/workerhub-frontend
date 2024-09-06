@@ -1,5 +1,8 @@
 import { IFormData } from "@/app/types/types"
 import authService from "@/services/auth.service"
+import { Input } from "@/app/components/ui/Input/Input"
+import styles from "./LoginForm.module.scss"
+
 import { useMutation } from "@tanstack/react-query"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
@@ -26,8 +29,11 @@ export const LoginForm = () => {
 
   const onSubmit: SubmitHandler<IFormData> = (data) => mutateLogin(data)
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+    <div className={styles.loginForm}>
+      <h2 className={styles.loginForm__title}>welcome back!</h2>
+      <h3 className={styles.loginForm__subtitle}>Enter your email and password to access your account</h3>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input />
         <label>
           Email
           <input
@@ -37,9 +43,7 @@ export const LoginForm = () => {
             style={{ color: 'red' }}
           />
         </label>
-      </div>
 
-      <div>
         <label>
           Password
           <input
@@ -49,15 +53,15 @@ export const LoginForm = () => {
             style={{ color: 'red' }}
           />
         </label>
-      </div>
 
-      <button
-        type="submit"
-        disabled={isLoginPending}
-      >
-        Login
-      </button>
+        <button
+          type="submit"
+          disabled={isLoginPending}
+        >
+          Login
+        </button>
 
-    </form>
+      </form>
+    </div>
   )
 }

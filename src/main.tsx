@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client'
 
 import { App } from './app/app';
 import '@/app/assets/styles/index.scss';
-import '@/app/assets/styles/fonts/stylesheet.scss'
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
