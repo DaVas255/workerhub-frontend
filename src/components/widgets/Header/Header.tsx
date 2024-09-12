@@ -1,8 +1,8 @@
 import styles from './Header.module.scss';
 import Logo from '@/app/assets/icons/Logo.svg?react';
 import ProfileIcon from '@/app/assets/icons/Profile.svg?react';
-
 import { NavLink } from "react-router-dom";
+import cn from 'clsx';
 
 
 export const Header = () => {
@@ -14,14 +14,14 @@ export const Header = () => {
       </NavLink>
 
       <nav className={styles.header__nav}>
-        <NavLink to={'/'} className={({ isActive }) =>
-          isActive ? [styles.header__navItemLink, styles.header__navItemLink_active].join(' ') : styles.header__navItemLink
-        }>
+        <NavLink to={'/'} className={({ isActive }) => cn(styles.header__navItem, {
+          [styles.header__navItem_active]: isActive
+        })}>
           Home
         </NavLink>
-        <NavLink to={'/orders'} className={({ isActive }) =>
-          isActive ? [styles.header__navItemLink, styles.header__navItemLink_active].join(' ') : styles.header__navItemLink
-        }>
+        <NavLink to={'/orders'} className={({ isActive }) => cn(styles.header__navItem, {
+          [styles.header__navItem_active]: isActive
+        })}>
           Orders
         </NavLink>
       </nav>
