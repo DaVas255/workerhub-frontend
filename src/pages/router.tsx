@@ -12,6 +12,7 @@ import { ManagerPage } from './managerTest/Manger'
 import { PlansPage } from './PlansPageTest/Plans'
 import { ProtectedRoutes } from './ProtectedRoutes'
 import { RedirectIfAuth } from './AuthPage/RedirectIfAuth'
+import { ProfilePage } from './ProfilePage/ProfilePage'
 
 export const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <HomePage />
+			},
+			{
+				path: PUBLIC_PAGES.PROFILE,
+				element: <ProfilePage />
 			}
 		]
 	},

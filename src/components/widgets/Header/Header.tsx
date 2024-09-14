@@ -26,7 +26,7 @@ export const Header = () => {
         </NavLink>
       </nav>
 
-      <NavLink to={'/auth'}>
+      <NavLink to={'/profile'}>
         <ProfileIcon className={styles.header__profile} />
       </NavLink>
     </header>
