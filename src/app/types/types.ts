@@ -2,18 +2,17 @@ import { UserRole } from '@/services/auth/auth.types'
 
 export interface IUser {
 	id: number
-	name: string
 	email: string
-	phoneNumber: string
-	cityId: number
 
 	avatarPath?: string
 	verificationToken?: string
 	rights: UserRole[]
 }
 
-export interface IFormData extends IUser {
+export interface IFormData {
+	email: string
 	password: string
+	confirm_password: string
 }
 
 export interface ICity {

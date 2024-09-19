@@ -1,17 +1,15 @@
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
-
 import { useRef, useTransition } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
-
 import authService from '@/services/auth/auth.service'
 import { IFormData } from '@/app/types/types'
 import { useNavigate } from 'react-router-dom'
 
 export function useAuthForm(isLogin: boolean) {
-	const { register, handleSubmit, reset } = useForm<IFormData>()
+	const { register, handleSubmit, reset, watch } = useForm<IFormData>()
 
 	const navigate = useNavigate()
 	const [isPending, startTransition] = useTransition()
@@ -46,7 +44,7 @@ export function useAuthForm(isLogin: boolean) {
 		},
 		onError(error) {
 			if (axios.isAxiosError(error)) {
-				toast.error(error.response?.data?.message)
+				console.error(error.response?.data?.message)
 			}
 		}
 	})
@@ -68,6 +66,7 @@ export function useAuthForm(isLogin: boolean) {
 		register,
 		handleSubmit,
 		onSubmit,
+		watch,
 		recaptchaRef,
 		isLoadingAuthForm
 	}

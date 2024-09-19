@@ -1,4 +1,4 @@
-import { useEffect, useTransition } from "react"
+import { useEffect, useTransition } from 'react'
 import { PUBLIC_PAGES } from '@/config/pages/public.config'
 import { useProfile } from '@/hooks/useProfile'
 import authService from '@/services/auth/auth.service'
@@ -28,8 +28,9 @@ export const ProfileForm = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <p>{user.email || 'Not found!'} {user.rights} </p>
-
+        <p>
+          {user.email || 'Not found!'} {user.rights}{' '}
+        </p>
       )}
       <button
         onClick={() => mutateLogout()}
