@@ -72,13 +72,13 @@ export function AuthForm({ isLogin }: AuthFormProps) {
             : 'Зарегистрироваться'}
       </button>
 
-      <button
+      {/* <button
         onClick={() => (window.location.href = getServerUrl('/auth/google'))}
         type='button'
         className={styles.authForm__google}
       >
         <GoogleIcon />
-      </button>
+      </button> */}
 
       <ReCAPTCHA
         ref={recaptchaRef}
