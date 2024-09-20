@@ -49,9 +49,7 @@ export function AuthForm({ isLogin }: AuthFormProps) {
             placeholder='Повторите пароль'
             {...register('confirm_password', {
               required: true,
-              validate: (val: string) => {
-                if (watch('password') != val) return 'Пароли не совпадают'
-              }
+              validate: value => value === watch('password')
             })}
             className={clsx(styles.authForm__input)}
           />

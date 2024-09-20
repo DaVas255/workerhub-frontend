@@ -1,18 +1,12 @@
-import { EnumTokens } from '@/services/auth/auth.service'
 import { useCookies } from 'react-cookie'
-
 import { Navigate, Outlet } from 'react-router-dom'
 
+import { EnumTokens } from '@/services/auth/auth.service'
+
 export const RedirectIfAuth = () => {
-	const [cookies] = useCookies([EnumTokens.ACCESS_TOKEN])
+  const [cookies] = useCookies([EnumTokens.ACCESS_TOKEN])
 
-	if (cookies.accessToken)
-		return (
-			<Navigate
-				to="/"
-				replace
-			/>
-		)
+  if (cookies.accessToken) return <Navigate to='/profile' replace />
 
-	return <Outlet />
+  return <Outlet />
 }

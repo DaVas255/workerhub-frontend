@@ -18,6 +18,8 @@ class AuthService {
 		data: IFormData,
 		token?: string | null
 	) {
+		delete data.confirm_password;
+
 		const response = await axiosClassic.post<IAuthResponse>(
 			`/auth/${type}`,
 			data,

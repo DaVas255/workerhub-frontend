@@ -23,7 +23,7 @@ export function useAuthForm(isLogin: boolean) {
 		onSuccess() {
 			startTransition(() => {
 				reset()
-				navigate('/')
+				navigate('/profile')
 			})
 		},
 		onError(error) {
@@ -39,7 +39,7 @@ export function useAuthForm(isLogin: boolean) {
 		onSuccess() {
 			startTransition(() => {
 				reset()
-				navigate('/')
+				navigate('/profile')
 			})
 		},
 		onError(error) {
